@@ -1,0 +1,23 @@
+{
+  "name": "breedbuddy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"yarn workspace web dev\" \"yarn workspace mobile start\"",
+    "start:web": "yarn workspace web dev",
+    "start:mobile": "yarn workspace mobile start"
+  },
+  "workspaces": [
+    "packages/web",
+    "packages/mobile",
+    "packages/shared"
+  ],
+  "dependencies": {
+    "prettier": "^3.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
